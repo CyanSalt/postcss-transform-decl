@@ -1,0 +1,39 @@
+{
+  "name": "postcss-transform-decl",
+  "version": "1.0.0-0",
+  "description": "Transform any declarations with custom rules",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore --fix .",
+    "prepack": "rm -rf dist && tsc",
+    "release": "release-it",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CyanSalt/postcss-transform-decl.git"
+  },
+  "keywords": [
+    "postcss"
+  ],
+  "author": "CyanSalt",
+  "license": "ISC",
+  "devDependencies": {
+    "@cyansalt/eslint-config": "^2.3.2",
+    "@cyansalt/tsconfig": "^1.1.2",
+    "@release-it/conventional-changelog": "^3.3.0",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "eslint": "^8.2.0",
+    "eslint-plugin-galaxy": "^1.8.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-unicorn": "^38.0.1",
+    "jest": "^27.3.1",
+    "postcss": "^8.3.11",
+    "release-it": "^14.11.8",
+    "ts-jest": "^27.0.7",
+    "typescript": "^4.5.2"
+  }
+}
