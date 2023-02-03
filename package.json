@@ -1,6 +1,6 @@
 {
   "name": "postcss-transform-decl",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Transform any declarations with custom rules",
   "main": "dist/index.js",
   "directories": {
