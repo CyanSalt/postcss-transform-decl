@@ -73,7 +73,7 @@ describe('postcss-transform-decl', () => {
       rules: [
         {
           prop: /^overflow-?/,
-          transform(decl) {
+          async transform(decl) {
             if (decl.prop === 'overflow-x') {
               return { from: 'overlay', to: 'auto' }
             } else {

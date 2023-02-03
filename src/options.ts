@@ -1,4 +1,4 @@
-import type { Rule } from './transform'
+import type { Rule } from './processor'
 
 export interface PluginOptions {
   rules?: Rule[],
