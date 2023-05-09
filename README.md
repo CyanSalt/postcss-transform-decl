@@ -1,5 +1,7 @@
 # postcss-transform-decl
 
+[![npm](https://img.shields.io/npm/v/postcss-transform-decl.svg)](https://www.npmjs.com/package/postcss-transform-decl)
+
 Transform any declarations with custom rules.
 
 ## Installation
