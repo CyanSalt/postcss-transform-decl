@@ -5,7 +5,6 @@ import { rootProcessor } from './processor'
 const plugin: PluginCreator<PluginOptions> = ({ rules = [] } = {}) => {
   return {
     postcssPlugin: 'postcss-transform-decl',
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     Once: root => rootProcessor(root, rules),
   }
 }
