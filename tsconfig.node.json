@@ -1,13 +1,12 @@
 {
-  "extends": "./tsconfig.base.json",
+  "extends": "@cyansalt/tsconfig",
   "compilerOptions": {
-    "outDir": ".typescript",
-    "module": "esnext",
-    "moduleResolution": "bundler",
+    "composite": true
   },
   "include": [
     "tests",
-    "*.config.mjs"
+    "*.config.mjs",
+    "*.config.mts"
   ],
   "references": [
     { "path": "./tsconfig.lib.json" }

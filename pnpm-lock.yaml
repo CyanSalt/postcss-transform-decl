@@ -12,8 +12,8 @@ importers:
         specifier: ^4.0.0
         version: 4.0.0(@babel/core@7.16.0)(@typescript-eslint/parser@7.9.0(eslint@9.3.0)(typescript@5.3.3))(eslint@9.3.0)(typescript@5.3.3)(vue-eslint-parser@9.4.2(eslint@9.3.0))
       '@cyansalt/tsconfig':
-        specifier: ^2.2.1
-        version: 2.2.1
+        specifier: ^3.0.0
+        version: 3.0.0
       '@release-it/conventional-changelog':
         specifier: ^8.0.1
         version: 8.0.1(release-it@17.0.0(typescript@5.3.3))
@@ -186,8 +186,8 @@ packages:
       typescript:
         optional: true
 
-  '@cyansalt/tsconfig@2.2.1':
-    resolution: {integrity: sha512-Ld392akmPNSk4UpMhST41BLmXEgz1keEsYWhVwhEBXcZ9uIwrrgf8d8j2VJDDuV3vaZrz/4PxpbuywJeeuYJGw==}
+  '@cyansalt/tsconfig@3.0.0':
+    resolution: {integrity: sha512-RNCVL2Y0ChN+tg7A6hSWk2p4kWda0dsMI25xxDrOMLKWpgIYCsb73Qg9jZfGg7i0FSgMAaPWBpHVdsdxhojiAg==}
 
   '@esbuild/aix-ppc64@0.25.12':
     resolution: {integrity: sha512-Hhmwd6CInZ3dwpuGTF8fJG6yoWmsToE+vYgD4nytZVxcu1ulHpUQRAB1UJ8+N1Am3Mz4+xOByoQoSZf4D+CpkA==}
@@ -4041,13 +4041,12 @@ snapshots:
       '@babel/helper-validator-identifier': 7.28.5
       js-tokens: 4.0.0
       picocolors: 1.1.1
-    optional: true
 
   '@babel/compat-data@7.16.4': {}
 
   '@babel/core@7.16.0':
     dependencies:
-      '@babel/code-frame': 7.23.5
+      '@babel/code-frame': 7.27.1
       '@babel/generator': 7.16.0
       '@babel/helper-compilation-targets': 7.16.3(@babel/core@7.16.0)
       '@babel/helper-module-transforms': 7.16.0
@@ -4090,7 +4089,7 @@ snapshots:
       '@babel/compat-data': 7.16.4
       '@babel/core': 7.16.0
       '@babel/helper-validator-option': 7.14.5
-      browserslist: 4.23.0
+      browserslist: 4.28.0
       semver: 6.3.1
 
   '@babel/helper-function-name@7.16.0':
@@ -4121,7 +4120,7 @@ snapshots:
       '@babel/helper-replace-supers': 7.16.0
       '@babel/helper-simple-access': 7.16.0
       '@babel/helper-split-export-declaration': 7.16.0
-      '@babel/helper-validator-identifier': 7.24.5
+      '@babel/helper-validator-identifier': 7.28.5
       '@babel/template': 7.16.0
       '@babel/traverse': 7.16.3
       '@babel/types': 7.16.0
@@ -4155,8 +4154,7 @@ snapshots:
 
   '@babel/helper-validator-identifier@7.24.5': {}
 
-  '@babel/helper-validator-identifier@7.28.5':
-    optional: true
+  '@babel/helper-validator-identifier@7.28.5': {}
 
   '@babel/helper-validator-option@7.14.5': {}
 
@@ -4186,13 +4184,13 @@ snapshots:
 
   '@babel/template@7.16.0':
     dependencies:
-      '@babel/code-frame': 7.23.5
+      '@babel/code-frame': 7.27.1
       '@babel/parser': 7.16.4
       '@babel/types': 7.16.0
 
   '@babel/traverse@7.16.3':
     dependencies:
-      '@babel/code-frame': 7.23.5
+      '@babel/code-frame': 7.27.1
       '@babel/generator': 7.16.0
       '@babel/helper-function-name': 7.16.0
       '@babel/helper-hoist-variables': 7.16.0
@@ -4206,7 +4204,7 @@ snapshots:
 
   '@babel/types@7.16.0':
     dependencies:
-      '@babel/helper-validator-identifier': 7.24.5
+      '@babel/helper-validator-identifier': 7.28.5
       to-fast-properties: 2.0.0
 
   '@cyansalt/eslint-config@4.0.0(@babel/core@7.16.0)(@typescript-eslint/parser@7.9.0(eslint@9.3.0)(typescript@5.3.3))(eslint@9.3.0)(typescript@5.3.3)(vue-eslint-parser@9.4.2(eslint@9.3.0))':
@@ -4245,7 +4243,7 @@ snapshots:
       - supports-color
       - vue-eslint-parser
 
-  '@cyansalt/tsconfig@2.2.1': {}
+  '@cyansalt/tsconfig@3.0.0': {}
 
   '@esbuild/aix-ppc64@0.25.12':
     optional: true
