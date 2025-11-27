@@ -1,15 +1,16 @@
 import postcss from 'postcss'
 import type Processor from 'postcss/lib/processor'
+import plugin from '../src'
+import type { PluginOptions } from '../src/options'
 
-export function createProcessor(options) {
-  const plugin = require('../src')
+export function createProcessor(options: PluginOptions) {
   return postcss([
     plugin(options),
   ])
 }
 
-export function createLegacyProcessor(options) {
-  const legacyPlugin = require('../src/legacy')
+export async function createLegacyProcessor(options: PluginOptions) {
+  const { default: legacyPlugin } = await import('../src/legacy')
   return postcss([
     legacyPlugin(options),
   ])

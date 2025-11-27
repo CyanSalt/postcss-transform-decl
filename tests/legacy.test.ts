@@ -1,12 +1,13 @@
+import { describe, expect, it, vi } from 'vitest'
 import { createLegacyProcessor, process } from './tester'
 
 describe('postcss-transform-decl', () => {
 
   it('should be able to transform properties with specific names', async () => {
-    const warnSpy = jest.spyOn(console, 'warn')
-    warnSpy.mockImplementation()
+    const warnSpy = vi.spyOn(console, 'warn')
+    warnSpy.mockImplementation(() => {})
 
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: 'overflow', from: 'overlay', to: 'hidden' },
       ],
@@ -20,7 +21,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to match property names with RegExps', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: /^overflow-?/, from: 'overlay', to: 'hidden' },
       ],
@@ -31,7 +32,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to add a new property before the property', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: /^overflow-?/, from: 'overlay', to: 'hidden', at: 'before' },
       ],
@@ -42,7 +43,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to add a new property after the property', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: /^overflow-?/, from: 'auto', to: 'overlay', at: 'after' },
       ],
@@ -53,7 +54,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to replace the original value', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: /^overflow-?/, from: /^(.+)lay$/, to: '$1load' },
       ],
@@ -64,7 +65,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to replace the original value with a function', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         { prop: /^overflow-?/, from: /^(.+)lay$/, to: (matches, over) => `${over}load` },
       ],
@@ -75,7 +76,7 @@ describe('postcss-transform-decl', () => {
   })
 
   it('should be able to set custom transform functions', async () => {
-    const processor = createLegacyProcessor({
+    const processor = await createLegacyProcessor({
       rules: [
         {
           prop: /^overflow-?/,

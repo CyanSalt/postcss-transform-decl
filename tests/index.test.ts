@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest'
 import { createProcessor, process } from './tester'
 
 describe('postcss-transform-decl', () => {

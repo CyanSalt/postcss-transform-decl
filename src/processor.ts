@@ -3,7 +3,7 @@ import type { Declaration, Root } from 'postcss'
 export interface Rule {
   prop: string | RegExp,
   from?: string | RegExp,
-  to?: string, // or ((substring: string, ...args: any[]) => string);
+  to?: string | ((substring: string, ...args: any[]) => string),
   at?: 'before' | 'after',
   transform?: (decl: Declaration) => PromiseLike<Omit<Rule, 'prop'> | null | undefined>
   | Omit<Rule, 'prop'> | null | undefined,
@@ -29,7 +29,7 @@ export async function rootProcessor(root: Root, rules: Rule[]): Promise<void> {
         ? await transform(decl) ?? rawRule
         : rawRule
       if (rule.from && rule.to && decl.value.match(rule.from)) {
-        const value = decl.value.replace(rule.from, rule.to)
+        const value = decl.value.replace(rule.from, rule.to as string)
         if (rule.at === 'before') {
           decl.cloneBefore({
             prop: decl.prop,

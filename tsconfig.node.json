@@ -1,11 +1,15 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "outDir": ".typescript"
+    "outDir": ".typescript",
+    "module": "esnext",
+    "moduleResolution": "bundler",
   },
   "include": [
     "tests",
-    "*.config.js",
     "*.config.mjs"
+  ],
+  "references": [
+    { "path": "./tsconfig.lib.json" }
   ]
 }

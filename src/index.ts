@@ -10,4 +10,4 @@ const plugin: PluginCreator<PluginOptions> = ({ rules = [] } = {}) => {
 }
 plugin.postcss = true
 
-module.exports = plugin
+export default plugin
