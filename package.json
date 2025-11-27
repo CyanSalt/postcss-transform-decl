@@ -3,12 +3,13 @@
   "version": "1.1.0",
   "description": "Transform any declarations with custom rules",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "test": "tests"
   },
   "scripts": {
     "lint": "eslint --fix './**/*.{js,mjs,ts}'",
-    "prepack": "unbuild",
+    "prepack": "tsdown",
     "release": "release-it",
     "test": "vitest"
   },
@@ -33,8 +34,8 @@
     "eslint": "^9.3.0",
     "postcss": "^8.3.11",
     "release-it": "^17.0.0",
+    "tsdown": "^0.16.7",
     "typescript": "^5.3.3",
-    "unbuild": "^3.6.1",
     "vitest": "^4.0.14"
   },
   "peerDependencies": {

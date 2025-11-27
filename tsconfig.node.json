@@ -6,7 +6,7 @@
   "include": [
     "tests",
     "*.config.mjs",
-    "*.config.mts"
+    "*.config.ts"
   ],
   "references": [
     { "path": "./tsconfig.lib.json" }
